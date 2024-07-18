@@ -45,7 +45,7 @@ export const Technologies = () => {
       <h1 className={styles.headText}>Technologies</h1>
       <div className={styles.divider} />
       <p className={styles.subHeadText}>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        These are the technologies I&apos;ve worked with
       </p>
       <div className="flex flex-wrap py-8 gap-7">
         {tech.map(({ title, icon }, index) => (

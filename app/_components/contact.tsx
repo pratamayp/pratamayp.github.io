@@ -24,14 +24,14 @@ export const Contact = () => {
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/pratamayp/"
-            className="size-10 hover:scale-110 rounded-full hover:bg-slate-700/50 ease-in duration-100 p-1"
+            className="size-10 hover:scale-110 rounded-full hover:bg-slate-700/50 ease-in duration-150 p-1"
           >
             <LinkedinIcon />
           </Link>
           <Link
             target="_blank"
             href="https://github.com/pratamayp"
-            className="size-10 hover:scale-110 rounded-full hover:bg-slate-700/50 ease-in duration-100 p-2"
+            className="size-10 hover:scale-110 rounded-full hover:bg-slate-700/50 ease-in duration-150 p-2"
           >
             <GithubIcon />
           </Link>
@@ -45,10 +45,6 @@ export const Contact = () => {
         ,{' '}
         <Link href="https://tailwindcss.com/" className="hover:text-zinc-400">
           Tailwind
-        </Link>{' '}
-        and{' '}
-        <Link href="https://ui.aceternity.com/" className="hover:text-zinc-400">
-          Aceternity
         </Link>
       </div>
     </section>
@@ -66,10 +62,14 @@ const ContactSection = ({
 }) => {
   return (
     <div className="flex flex-col gap-4">
-      <div className="uppercase text-zinc-400 text-xs font-semibold">
+      <div className="uppercase text-zinc-500 text-xs font-semibold">
         {title}
       </div>
-      <Link target="_blank" href={href} className="text-zinc-100">
+      <Link
+        target="_blank"
+        href={href}
+        className="text-zinc-200 hover:text-white"
+      >
         {value}
       </Link>
     </div>

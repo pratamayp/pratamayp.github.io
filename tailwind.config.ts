@@ -79,8 +79,13 @@ const config = {
           '0%': { transform: 'translateX(-200px)' },
           '100%': { transform: 'translateX(200px)' },
         },
+        'accordion-right': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(0.25rem)' },
+        },
       },
       animation: {
+        'accordion-right': 'accordion-right 0.4s infinite alternate',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         move: 'move 5s linear infinite',

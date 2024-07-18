@@ -79,7 +79,7 @@ export const Card = ({ className, children }: DefaultProps) => {
   return (
     <div
       className={cn(
-        'rounded-2xl h-full w-full p-4 overflow-hidden bg-black border-[3px] border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20',
+        'rounded-2xl h-full w-full p-4 overflow-hidden bg-black border-2 border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20',
         className
       )}
     >
@@ -110,7 +110,7 @@ export const CardDescription = ({ className, children }: DefaultProps) => {
   return (
     <p
       className={cn(
-        'mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm',
+        'mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm',
         className
       )}
     >
