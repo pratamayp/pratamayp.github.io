@@ -1,7 +1,7 @@
 import React from 'react';
 import { styles } from '../styles';
 import Image from 'next/image';
-import { CardBackgroundGradient } from '@/components/ui/card-bg-gradient';
+import { BackgroundGradient } from '@/components/ui/card-bg-gradient';
 
 interface TechCardProps {
   icon: string;
@@ -49,7 +49,7 @@ export const Technologies = () => {
       </p>
       <div className="flex flex-wrap py-8 gap-7">
         {tech.map(({ title, icon }, index) => (
-          <CardBackgroundGradient key={index} />
+          <TechGradientCard key={index} />
           // <TechCard key={title} icon={icon} title={title} />
         ))}
       </div>
@@ -65,5 +65,22 @@ const TechCard = ({ icon, title }: TechCardProps) => {
       </div>
       <p className="text-center text-sm">{title}</p>
     </div>
+  );
+};
+
+const TechGradientCard = () => {
+  return (
+    <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
+      <Image
+        src={`/html.png`}
+        alt="jordans"
+        height="100"
+        width="100"
+        className="object-contain"
+      />
+      <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200 text-center">
+        Shoes
+      </p>
+    </BackgroundGradient>
   );
 };

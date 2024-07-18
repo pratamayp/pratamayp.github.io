@@ -12,7 +12,7 @@ export function CardOverlay({}) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={cn(
-          'group w-full cursor-pointer overflow-hidden relative card h-96 rounded-lg shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800',
+          'group w-full cursor-pointer overflow-hidden relative card h-96 rounded-3xl shadow-xl mx-auto flex flex-col justify-end p-4 border-[3px] border-transparent dark:border-neutral-800',
           'bg-[url(https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80)] bg-cover',
           'transition-all duration-500'
         )}
@@ -20,10 +20,10 @@ export function CardOverlay({}) {
         <div
           className={cn(
             'absolute inset-0 bg-black transition-opacity duration-500',
-            isHovered ? 'opacity-50' : 'opacity-0'
+            isHovered ? 'opacity-65' : 'opacity-0'
           )}
         ></div>
-        <div
+        {/* <div
           className={cn(
             'text relative z-50 transition-opacity duration-500',
             isHovered ? 'opacity-0' : 'opacity-100'
@@ -32,7 +32,7 @@ export function CardOverlay({}) {
           <h1 className="font-bold text-md md:text-xl text-gray-50 relative text-center">
             Nama Aplikasi
           </h1>
-        </div>
+        </div> */}
         <div
           className={cn(
             'text z-50 transition-opacity duration-500 absolute inset-0 flex flex-col justify-end p-4',

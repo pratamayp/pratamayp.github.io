@@ -25,7 +25,7 @@ export const BackgroundGradient = ({
     },
   };
   return (
-    <div className={cn('relative p-[4px] group', containerClassName)}>
+    <div className={cn('relative p-[3px] group', containerClassName)}>
       <motion.div
         variants={animate ? variants : undefined}
         initial={animate ? 'initial' : undefined}
@@ -73,22 +73,3 @@ export const BackgroundGradient = ({
     </div>
   );
 };
-
-export function CardBackgroundGradient() {
-  return (
-    <div>
-      <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
-        <Image
-          src={`/html.png`}
-          alt="jordans"
-          height="100"
-          width="100"
-          className="object-contain"
-        />
-        <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200 text-center">
-          Shoes
-        </p>
-      </BackgroundGradient>
-    </div>
-  );
-}
