@@ -61,13 +61,13 @@ const tech: TechCardProps[] = [
 
 export const Technologies = () => {
   return (
-    <section className="container flex flex-col py-10">
+    <section className="px-10 lg:container flex flex-col py-0 md:py-16">
       <h1 className={styles.headText}>Technologies</h1>
       <div className={styles.divider} />
       <p className={styles.subHeadText}>
         These are the technologies I&apos;ve worked with
       </p>
-      <div className="flex flex-wrap py-8 gap-7">
+      <div className="flex flex-wrap py-8 gap-7 justify-center md:justify-normal">
         {tech.map(({ title, icon }, index) => (
           <TechGradientCard key={index} title={title} icon={icon} />
         ))}

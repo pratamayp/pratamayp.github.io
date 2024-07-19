@@ -33,7 +33,7 @@ export const CardHoverEffect = ({
   return (
     <div
       className={cn(
-        'grid grid-cols-1 py-10',
+        'grid grid-cols-1 py-4',
         !isFull && 'md:grid-cols-2  lg:grid-cols-3',
         className
       )}

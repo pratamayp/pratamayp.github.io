@@ -4,7 +4,7 @@ import { CardHoverEffect } from '@/components/ui/card-hover-effect';
 
 export const Experience = () => {
   return (
-    <section className="container flex flex-col py-10">
+    <section className="px-10 lg:container flex flex-col py-0 md:py-16">
       <h1 className={styles.headText}>Work Experience</h1>
       <div className={styles.divider} />
       <p className={styles.subHeadText}>

@@ -5,10 +5,10 @@ import React from 'react';
 
 export const Contact = () => {
   return (
-    <section className="container">
+    <section className="px-10 lg:container">
       <hr />
-      <div className="flex py-8 justify-between">
-        <div className="flex gap-14">
+      <div className="flex flex-col md:flex-row py-8 justify-between gap-6 md:gap-0">
+        <div className="flex flex-col md:flex-row gap-6 lg:gap-14">
           <ContactSection
             title="Phone"
             value="+6285157712278"
@@ -61,7 +61,7 @@ const ContactSection = ({
   href: string;
 }) => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-1 md:gap-4">
       <div className="uppercase text-zinc-500 text-xs font-semibold">
         {title}
       </div>
