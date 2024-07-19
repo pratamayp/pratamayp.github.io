@@ -10,32 +10,52 @@ interface TechCardProps {
 
 const tech: TechCardProps[] = [
   {
-    icon: 'html.png',
+    icon: 'html.svg',
     title: 'HTML',
   },
   {
-    icon: 'html.png',
-    title: 'HTML',
+    icon: 'css.svg',
+    title: 'CSS',
   },
   {
-    icon: 'html.png',
-    title: 'HTML',
+    icon: 'javascript.svg',
+    title: 'Javascript',
   },
   {
-    icon: 'html.png',
-    title: 'HTML',
+    icon: 'typescript.svg',
+    title: 'Typescript',
   },
   {
-    icon: 'html.png',
-    title: 'HTML',
+    icon: 'vuejs.svg',
+    title: 'Vue.js',
   },
   {
-    icon: 'html.png',
-    title: 'HTML',
+    icon: 'react.svg',
+    title: 'React',
   },
   {
-    icon: 'html.png',
-    title: 'HTML',
+    icon: 'nextjs.png',
+    title: 'Next.js',
+  },
+  {
+    icon: 'tailwind.svg',
+    title: 'Tailwind',
+  },
+  {
+    icon: 'aws.svg',
+    title: 'AWS',
+  },
+  {
+    icon: 'firebase.svg',
+    title: 'Firebase',
+  },
+  {
+    icon: 'git.svg',
+    title: 'Git',
+  },
+  {
+    icon: 'figma.svg',
+    title: 'Figma',
   },
 ];
 
@@ -49,37 +69,26 @@ export const Technologies = () => {
       </p>
       <div className="flex flex-wrap py-8 gap-7">
         {tech.map(({ title, icon }, index) => (
-          <TechGradientCard key={index} />
-          // <TechCard key={title} icon={icon} title={title} />
+          <TechGradientCard key={index} title={title} icon={icon} />
         ))}
       </div>
     </section>
   );
 };
 
-const TechCard = ({ icon, title }: TechCardProps) => {
+const TechGradientCard = ({ title, icon }: TechCardProps) => {
   return (
-    <div className="flex flex-col border shadow-white shadow-md rounded-lg p-6 px-8 gap-4 hover:scale-[102%] ease-out">
-      <div className="relative size-16">
-        <Image src={`/${icon}`} alt="html" fill className="object-cover" />
+    <BackgroundGradient className="rounded-[22px] w-32 p-4 sm:p-4 bg-white dark:bg-black/70 grayscale hover:grayscale-0 ease duration-300">
+      <div className="relative size-16 w-full">
+        <Image
+          src={`/tech/${icon}`}
+          alt={icon}
+          fill
+          className="object-contain"
+        />
       </div>
-      <p className="text-center text-sm">{title}</p>
-    </div>
-  );
-};
-
-const TechGradientCard = () => {
-  return (
-    <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
-      <Image
-        src={`/html.png`}
-        alt="jordans"
-        height="100"
-        width="100"
-        className="object-contain"
-      />
-      <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200 text-center">
-        Shoes
+      <p className="text-base sm:text-xs text-black mt-2 dark:text-neutral-200 text-center">
+        {title}
       </p>
     </BackgroundGradient>
   );
