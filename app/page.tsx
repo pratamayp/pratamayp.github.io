@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main className="w-full flex flex-col">
       <Hero />
-      <Technologies />
       <Projects />
       <Experience />
+      <Technologies />
       <Contact />
     </main>
   );

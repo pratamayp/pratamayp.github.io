@@ -8,7 +8,7 @@ export const OutlineButton = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   return (
     <div
-      className="relative p-[2px] active:scale-100 rounded-xl transition-transform duration-300 ease-in-out overflow-hidden"
+      className="relative p-[1px] active:scale-100 rounded-xl transition-transform duration-300 ease-in-out overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

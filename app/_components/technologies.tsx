@@ -67,7 +67,7 @@ export const Technologies = () => {
       <p className={styles.subHeadText}>
         These are the technologies I&apos;ve worked with
       </p>
-      <div className="flex flex-wrap py-8 gap-7 justify-center md:justify-normal">
+      <div className="py-8 gap-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         {tech.map(({ title, icon }, index) => (
           <TechGradientCard key={index} title={title} icon={icon} />
         ))}
@@ -78,7 +78,7 @@ export const Technologies = () => {
 
 const TechGradientCard = ({ title, icon }: TechCardProps) => {
   return (
-    <BackgroundGradient className="rounded-[22px] w-32 p-4 sm:p-4 bg-white dark:bg-black/70 grayscale hover:grayscale-0 ease duration-300">
+    <BackgroundGradient className="rounded-[22px] p-4 sm:px-4 py-8 bg-white dark:bg-black/70 grayscale hover:grayscale-0 ease duration-300">
       <div className="relative size-16 w-full">
         <Image
           src={`/tech/${icon}`}

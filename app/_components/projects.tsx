@@ -75,7 +75,7 @@ export const Projects = () => {
       <div className={styles.divider} />
       <p className={styles.subHeadText}>Check out some of my work here</p>
 
-      <div className="py-8 flex flex-wrap gap-7 w-full justify-center xl:justify-normal">
+      <div className="py-8 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, idx) => (
           <CardOverlay key={idx} project={project} />
         ))}
