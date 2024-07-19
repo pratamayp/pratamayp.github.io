@@ -51,11 +51,19 @@ const projects: Project[] = [
     web_url: 'https://web-telkominfra-uso.oemahsolution.com/',
   },
   {
+    title: 'Scoolaa.id',
+    description:
+      'Scoolaa.id is a web-based and mobile application that can help manage educational facilities. Services offered include attendance features, payment of tuition fees, pocket money, health reports, grade reports, class schedules, lists of teachers and employees, donations and many other service features.',
+    thumbnail: 'scoolaa.jpg',
+    techstack: ['Vue.js', 'GraphQL', 'Bootstrap', 'FCM', 'Socket.io', 'i18n'],
+    web_url: 'https://dashboard.scoolaa.id/',
+  },
+  {
     title: 'UPL Tracko',
     description:
       'Web application developed for PT UPL Indonesia allows for the tracking of sales activities, offering comprehensive insight into sales performance. This platform provides a user-friendly interface, facilitating efficient monitoring and analysis of sales data.',
     thumbnail: 'upl.jpg',
-    techstack: ['Vue.js', 'Graphql', 'Bootstrap', 'i18n Plugin'],
+    techstack: ['Vue.js', 'GraphQL', 'Bootstrap', 'i18n'],
     web_url: 'https://upl-treko.com/',
   },
 ];

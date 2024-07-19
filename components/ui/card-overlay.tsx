@@ -60,9 +60,13 @@ export function CardOverlay({
               <TechstackBadge key={tc} value={tc} />
             ))}
           </div>
-          <div className="text-center mt-4">
-            <OutlineButton web={web_url} />
-          </div>
+          <Link
+            target="_blank"
+            href={web_url ?? '#'}
+            className="text-center pt-4 flex justify-center"
+          >
+            <OutlineButton />
+          </Link>
         </div>
       </div>
     </div>
@@ -77,30 +81,42 @@ const TechstackBadge = ({ value }: { value: string }) => {
   );
 };
 
-const OutlineButton = ({ web }: { web?: string }) => {
+const OutlineButton = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   return (
-    <Link href={web ?? '#'} target="_blank">
-      <button
-        className="border-2 border-neutral-600 hover:border-neutral-400 rounded-full px-6 py-2 ease-in-out duration-200 hover:scale-105 hover:bg-zinc-800 active:scale-100"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+    <div
+      className="relative p-[2px] active:scale-100 rounded-xl transition-transform duration-300 ease-in-out overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div
+        className={cn(
+          'absolute inset-0 rounded-xl',
+          isHovered
+            ? 'absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#4ade80_0%,#393BB2_30%,#4ade80_100%)]'
+            : 'bg-transparent'
+        )}
+      />
+      <div
+        className={cn(
+          'relative w-fit px-6 py-2 bg-zinc-950 rounded-[10px] transition-all duration-300 ease-in-out'
+        )}
       >
         <div
           className={cn(
-            'flex items-center gap-2 text-xs ease-in-out duration-200',
-            !isHovered ? 'text-zinc-400' : 'text-zinc-100'
+            'flex items-center gap-2 text-xs transition-colors duration-300 ease-in-out font-semibold',
+            isHovered ? 'text-zinc-100' : 'text-zinc-300'
           )}
         >
           Visit
           <ChevronRight
             className={cn(
-              'size-4 transition-transform motion-reduce:transform-none',
+              'size-4 transition-transform duration-500 ease-in-out motion-reduce:transform-none',
               isHovered && 'animate-accordion-right'
             )}
           />
         </div>
-      </button>
-    </Link>
+      </div>
+    </div>
   );
 };
