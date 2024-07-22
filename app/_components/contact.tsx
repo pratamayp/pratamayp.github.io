@@ -5,14 +5,14 @@ import React from 'react';
 
 export const Contact = () => {
   return (
-    <section className="px-10 lg:container">
+    <section id="contact" className="px-10 lg:container">
       <hr />
       <div className="flex flex-col md:flex-row py-8 justify-between gap-6 md:gap-0">
         <div className="flex flex-col md:flex-row gap-6 lg:gap-14">
           <ContactSection
             title="Phone"
             value="+6285157712278"
-            href="https://wa.me/6285157712278"
+            href="tel:6285157712278"
           />
           <ContactSection
             title="E-Mail"

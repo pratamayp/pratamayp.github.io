@@ -22,7 +22,7 @@ export function CardOverlay({
         'transition-all duration-500'
       )}
       style={{
-        backgroundImage: `url(${thumbnail})`,
+        backgroundImage: `url(/project/${thumbnail})`,
         backgroundSize: 'cover',
       }}
     >

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smooth Scroll Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans leading-normal tracking-normal">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
+      <div class="container mx-auto flex justify-between">
+        <a href="#section1" class="text-white px-3 py-2 hover:bg-gray-700"
+          >Section 1</a
+        >
+        <a href="#section2" class="text-white px-3 py-2 hover:bg-gray-700"
+          >Section 2</a
+        >
+        <a href="#section3" class="text-white px-3 py-2 hover:bg-gray-700"
+          >Section 3</a
+        >
+      </div>
+    </nav>
+
+    <!-- Sections -->
+    <div class="pt-16">
+      <section
+        id="section1"
+        class="h-screen bg-blue-100 flex items-center justify-center"
+      >
+        <h1 class="text-3xl">Section 1</h1>
+      </section>
+      <section
+        id="section2"
+        class="h-screen bg-blue-200 flex items-center justify-center"
+      >
+        <h1 class="text-3xl">Section 2</h1>
+      </section>
+      <section
+        id="section3"
+        class="h-screen bg-blue-300 flex items-center justify-center"
+      >
+        <h1 class="text-3xl">Section 3</h1>
+      </section>
+    </div>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
