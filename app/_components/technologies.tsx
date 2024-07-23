@@ -61,7 +61,7 @@ const tech: TechCardProps[] = [
 
 export const Technologies = () => {
   return (
-    <section className="px-10 lg:container flex flex-col py-0 md:py-16">
+    <section className="px-10 lg:container 2xl:px-14 flex flex-col py-0 md:py-16">
       <h1 className={styles.headText}>Technologies</h1>
       <div className={styles.divider} />
       <p className={styles.subHeadText}>

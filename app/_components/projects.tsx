@@ -70,7 +70,7 @@ const projects: Project[] = [
 
 export const Projects = () => {
   return (
-    <section className="px-10 lg:container flex flex-col py-0 md:py-16">
+    <section className="px-10 lg:container 2xl:px-14 flex flex-col py-0 md:py-16">
       <h1 className={styles.headText}>Projects</h1>
       <div className={styles.divider} />
       <p className={styles.subHeadText}>Check out some of my work here</p>

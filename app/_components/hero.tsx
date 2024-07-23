@@ -4,7 +4,7 @@ import { MessageButton } from './message-button';
 
 export const Hero = () => {
   return (
-    <section className="h-screen flex px-10 lg:container relative">
+    <section className="h-screen flex px-10 lg:container 2xl:px-14 relative">
       <div className="flex flex-col justify-center h-full">
         <h1 className="text-xl md:text-[36px] font-semibold md:mb-6 text-zinc-300">
           Hello!
