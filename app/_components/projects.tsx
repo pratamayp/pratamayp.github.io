@@ -62,7 +62,7 @@ const projects: Project[] = [
     title: 'UPL Tracko',
     description:
       'Web application developed for PT UPL Indonesia allows for the tracking of sales activities, offering comprehensive insight into sales performance. This platform provides a user-friendly interface, facilitating efficient monitoring and analysis of sales data.',
-    thumbnail: 'upl.jpg',
+    thumbnail: 'upl-tracko.jpg',
     techstack: ['Vue.js', 'GraphQL', 'Bootstrap', 'i18n'],
     web_url: 'https://upl-treko.com/',
   },
