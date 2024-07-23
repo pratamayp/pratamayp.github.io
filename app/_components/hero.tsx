@@ -1,6 +1,7 @@
 import React from 'react';
 import { styles } from '../styles';
-import { MessageButton } from './message-button';
+import { TwistingGlareButton } from '@/components/ui/button-twisting-glare';
+import Link from 'next/link';
 
 export const Hero = () => {
   return (
@@ -20,7 +21,14 @@ export const Hero = () => {
           user-friendly web applications. Proficient in Next.js and Vue.js for
           seamless development.
         </div>
-        <MessageButton />
+        <div className="flex gap-2">
+          <Link href="#contact">
+            <TwistingGlareButton value="Get in Touch" sendIcon />
+          </Link>
+          <Link href="/resume" target='_blank'>
+            <TwistingGlareButton value="Resume" />
+          </Link>
+        </div>
       </div>
     </section>
   );

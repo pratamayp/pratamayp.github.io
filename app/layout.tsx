@@ -9,9 +9,6 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Yoga Pratama | Front-end Developer',
   description: 'Web Portfolio of Yoga Pratama',
-  icons: {
-    icon: '/pr.svg',
-  },
 };
 
 export default function RootLayout({

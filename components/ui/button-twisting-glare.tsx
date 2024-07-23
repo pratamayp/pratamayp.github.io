@@ -4,13 +4,17 @@ import React from 'react';
 import { HoverBorderGradient } from '@/components/ui/button-hover-gradient';
 import { Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
 
-export const MessageButton = () => {
+export const TwistingGlareButton = ({
+  value,
+  sendIcon,
+}: {
+  value: string;
+  sendIcon?: boolean;
+}) => {
   const [hovered, setHovered] = React.useState<boolean>(false);
   return (
-    <Link
-      href="#contact"
+    <div
       className="mt-4 w-fit"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -20,11 +24,13 @@ export const MessageButton = () => {
         as="button"
         className="dark:bg-background bg-white text-black dark:text-white flex items-center space-x-2 px-4 ,md:px-6 py2 md:py-4"
       >
-        <span>Get in Touch</span>
-        <Send
-          className={cn('size-5 ease duration-500', hovered && 'rotate-45')}
-        />
+        <span>{value}</span>
+        {sendIcon && (
+          <Send
+            className={cn('size-5 ease duration-500', hovered && 'rotate-45')}
+          />
+        )}
       </HoverBorderGradient>
-    </Link>
+    </div>
   );
 };

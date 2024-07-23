@@ -5,7 +5,7 @@ import React from 'react';
 
 export const Contact = () => {
   return (
-    <section id="contact" className="px-10 lg:container">
+    <section id="contact" className="px-10 lg:container 2xl:px-14">
       <hr />
       <div className="flex flex-col md:flex-row py-8 justify-between gap-6 md:gap-0">
         <div className="flex flex-col md:flex-row gap-6 lg:gap-14">
@@ -68,7 +68,7 @@ const ContactSection = ({
       <Link
         target="_blank"
         href={href}
-        className="text-zinc-200 hover:text-white"
+        className="text-zinc-200 hover:text-white hover:translate-x-1 ease duration-300"
       >
         {value}
       </Link>
