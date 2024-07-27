@@ -39,11 +39,19 @@ export const Contact = () => {
       </div>
       <div className="text-zinc-600 text-xs pb-4">
         Build with{' '}
-        <Link href="https://nextjs.org/" className="hover:text-zinc-400">
+        <Link
+          href="https://nextjs.org/"
+          className="hover:text-zinc-400"
+          target="_blank"
+        >
           Next.js
         </Link>
         ,{' '}
-        <Link href="https://tailwindcss.com/" className="hover:text-zinc-400">
+        <Link
+          href="https://tailwindcss.com/"
+          className="hover:text-zinc-400"
+          target="_blank"
+        >
           Tailwind
         </Link>
       </div>
