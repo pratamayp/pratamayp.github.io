@@ -64,7 +64,6 @@ export function CardOverlay({
           href={web_url ?? '#'}
           className="text-center pt-4 flex justify-center"
         >
-          {/* <OutlineButton /> */}
           <VisitButton />
         </Link>
       </div>
@@ -81,20 +80,43 @@ const TechstackBadge = ({ value }: { value: string }) => {
 };
 
 const VisitButton = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <BackgroundGradient className="rounded-[22px] p-2 sm:px-4 bg-white dark:bg-black/70 grayscale hover:grayscale-0 ease duration-300">
-      <div
-        className={cn(
-          'flex items-center gap-2 text-xs transition-colors duration-300 ease-in-out font-semibold group-hover:text-zinc-100 text-zinc-300'
-        )}
-      >
-        Visit
-        <ChevronRight
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {isHovered ? (
+        <BackgroundGradient className="rounded-[22px] p-2 sm:px-4 bg-white dark:bg-black/70 grayscale hover:grayscale-0 ease duration-300">
+          <div
+            className={cn(
+              'flex items-center gap-2 text-xs transition-colors duration-300 ease-in-out font-semibold group-hover:text-zinc-100 text-zinc-300'
+            )}
+          >
+            Visit
+            <ChevronRight
+              className={cn(
+                'size-4 transition-transform duration-500 ease-in-out motion-reduce:transform-none',
+                isHovered && 'animate-accordion-right'
+              )}
+            />
+          </div>
+        </BackgroundGradient>
+      ) : (
+        <div
           className={cn(
-            'size-4 transition-transform duration-500 ease-in-out motion-reduce:transform-none group-hover:animate-accordion-right'
+            'flex p-[10px] items-center gap-2 text-xs transition-colors duration-300 ease-in-out font-semibold group-hover:text-zinc-100 text-zinc-300'
           )}
-        />
-      </div>
-    </BackgroundGradient>
+        >
+          Visit
+          <ChevronRight
+            className={cn(
+              'size-4 transition-transform duration-500 ease-in-out motion-reduce:transform-none',
+              isHovered && 'animate-accordion-right'
+            )}
+          />
+        </div>
+      )}
+    </div>
   );
 };

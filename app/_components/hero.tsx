@@ -25,7 +25,7 @@ export const Hero = () => {
             Yoga Pratama
           </span>
         </h1>
-        <div className={`${styles.subHeadText} mt-4 max-w-screen-sm`}>
+        <div className={`${styles.subHeadText} mt-4 max-w-screen-sm z-10`}>
           A Front End Developer specializing in building secure and
           user-friendly web applications. Proficient in Next.js and Vue.js for
           seamless development.
