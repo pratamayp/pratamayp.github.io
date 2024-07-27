@@ -1,6 +1,15 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 export const CodeSVG = () => {
   return (
-    <div className="absolute h-screen lg:w-1/2 -top-8 right-0 opacity-40">
+    <motion.div
+      className="absolute h-screen lg:w-1/2 -top-8 right-0 opacity-40"
+      initial={{ x: 40, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ ease: 'easeInOut', duration: 0.6, delay: 0.6 }}
+    >
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
@@ -29,6 +38,6 @@ export const CodeSVG = () => {
           ></path>
         </g>
       </svg>
-    </div>
+    </motion.div>
   );
 };

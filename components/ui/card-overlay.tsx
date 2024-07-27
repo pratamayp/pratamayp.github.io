@@ -3,8 +3,9 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Project } from '@/app/_components/projects';
-import { OutlineButton } from './outline-button';
 import Link from 'next/link';
+import { BackgroundGradient } from './card-bg-gradient';
+import { ChevronRight } from 'lucide-react';
 
 export function CardOverlay({
   project: { title, description, techstack, thumbnail, web_url },
@@ -63,7 +64,8 @@ export function CardOverlay({
           href={web_url ?? '#'}
           className="text-center pt-4 flex justify-center"
         >
-          <OutlineButton />
+          {/* <OutlineButton /> */}
+          <VisitButton />
         </Link>
       </div>
     </div>
@@ -75,5 +77,24 @@ const TechstackBadge = ({ value }: { value: string }) => {
     <div className="px-2 py-1 border font-semibold font-mono bg-zinc-800 rounded-lg text-xs">
       {value}
     </div>
+  );
+};
+
+const VisitButton = () => {
+  return (
+    <BackgroundGradient className="rounded-[22px] p-2 sm:px-4 bg-white dark:bg-black/70 grayscale hover:grayscale-0 ease duration-300">
+      <div
+        className={cn(
+          'flex items-center gap-2 text-xs transition-colors duration-300 ease-in-out font-semibold group-hover:text-zinc-100 text-zinc-300'
+        )}
+      >
+        Visit
+        <ChevronRight
+          className={cn(
+            'size-4 transition-transform duration-500 ease-in-out motion-reduce:transform-none group-hover:animate-accordion-right'
+          )}
+        />
+      </div>
+    </BackgroundGradient>
   );
 };

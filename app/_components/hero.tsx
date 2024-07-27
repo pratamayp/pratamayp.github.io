@@ -1,12 +1,21 @@
+'use client';
+
 import React from 'react';
 import { styles } from '../styles';
 import { TwistingGlareButton } from '@/components/ui/button-twisting-glare';
+import { motion } from 'framer-motion';
+
 import Link from 'next/link';
 
 export const Hero = () => {
   return (
     <section className="h-screen flex px-10 lg:container 2xl:px-14 relative">
-      <div className="flex flex-col justify-center h-full">
+      <motion.div
+        className="flex flex-col justify-center h-full"
+        initial={{ x: -40, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ ease: 'easeInOut', duration: 0.6 }}
+      >
         <h1 className="text-xl md:text-[36px] font-semibold md:mb-6 text-zinc-300">
           Hello!
         </h1>
@@ -25,11 +34,11 @@ export const Hero = () => {
           <Link href="#contact">
             <TwistingGlareButton value="Get in Touch" sendIcon />
           </Link>
-          <Link href="/resume" target='_blank'>
+          <Link href="/resume/en" target="_blank">
             <TwistingGlareButton value="Resume" />
           </Link>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
