@@ -38,7 +38,7 @@ export const Contact = () => {
         </div>
       </div>
       <div className="text-zinc-600 text-xs pb-4">
-        Build with{' '}
+        Built with{' '}
         <Link
           href="https://nextjs.org/"
           className="hover:text-zinc-400"
@@ -54,6 +54,15 @@ export const Contact = () => {
         >
           Tailwind
         </Link>
+        , and some{' '}
+        <Link
+          href="https://ui.aceternity.com/"
+          className="hover:text-zinc-400"
+          target="_blank"
+        >
+          Aceternity
+        </Link>{' '}
+        components
       </div>
     </section>
   );

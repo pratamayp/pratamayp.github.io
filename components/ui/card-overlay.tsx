@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Project } from '@/app/_components/projects';
 import Link from 'next/link';
 import { BackgroundGradient } from './card-bg-gradient';
 import { ChevronRight } from 'lucide-react';
+import { Project } from '@/constant/projects';
 
 export function CardOverlay({
   project: { title, description, techstack, thumbnail, web_url },
