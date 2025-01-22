@@ -9,6 +9,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Bina Pertiwi eBudgeting',
+    description:
+      'Web application for PT Bina Pertiwi to facilitate management and input of CAPEX (Capital Expenditure) and OPEX(Operational Expenditure). The application enhances efficiency in budgeting processes, ensures structured datamanagement, and provides better visibility and control over the company’s expenditures.',
+    thumbnail: 'bp.png',
+    techstack: ['Next.js', 'TypeScript', 'GraphQL', 'Tailwind', 'Prisma'],
+    web_url: '',
+  },
+  {
     title: 'Gudangternak',
     description:
       'Web application designed to facilitate the management of livestock that will be used for qurbani. This application provides features to monitor and manage all aspects related to livestock, transaction, distribution, and reporting.',

@@ -59,13 +59,15 @@ export function CardOverlay({
             <TechstackBadge key={tc} value={tc} />
           ))}
         </div>
-        <Link
-          target="_blank"
-          href={web_url ?? '#'}
-          className="text-center pt-4 flex justify-center"
-        >
-          <VisitButton />
-        </Link>
+        {web_url !== '' && (
+          <Link
+            target="_blank"
+            href={web_url ?? '#'}
+            className="text-center pt-4 flex justify-center"
+          >
+            <VisitButton />
+          </Link>
+        )}
       </div>
     </div>
   );

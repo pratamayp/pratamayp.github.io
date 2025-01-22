@@ -25,8 +25,8 @@ const Resume = ({ params }: { params: ResumeParams }) => {
 
   const docId =
     lang === 'en'
-      ? '1t6Qm-IsxHRMICpqchzPZpsUa1xnMTtLJ'
-      : '1ilo7eM_oXSHHLem6qBLbZpUWPQqXgPT2';
+      ? '17Dqtt10Am5j0hFJAIyGM2WEX8EII67iq'
+      : '1SI6jmuMX3iwqErfwU6BUxjpMxk75qtNL';
 
   const viewPath = `https://drive.google.com/file/d/${docId}/preview`;
 
